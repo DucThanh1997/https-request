@@ -25,7 +25,8 @@ Bởi vì được “gửi và nhận bởi client và server” nên HTTP head
 - Upgrade-Insecure-Requests: là cảnh báo của trình duyệt đối với những giao thức http vì hiện nay nó đã không còn an toàn và có nguy cơ bị đánh cắp dữ liệu (đặc biệt là thông tin đăng nhập, tài khoản ngân hàng). Cách tốt nhất hiện nay là nâng cấp lên https để dữ liệu truyền tải được an toàn hơn.
 
 ## HTTP response header
-- Request header
+
+
 | Name        | Description           | Example  |
 | ------------- |:-------------:| -----:|
 | A-IM | Chấp nhận biến thao tác cho các request | A-IM: feed|
@@ -67,6 +68,7 @@ Bởi vì được “gửi và nhận bởi client và server” nên HTTP head
 
 
 Response header
+
 | Name        | Description           | Example  |
 | ------------- |:-------------:| -----:|
 | Access-Control-Allow-Origin, Access-Control-Allow-Credentials, Access-Control-Expose-Headers, Access-Control-Max-Age, Access-Control-Allow-Methods, Access-Control-Allow-Headers | CHỉ ra các website tham gia vào các request | Access-Control-Allow-Origin: * |
