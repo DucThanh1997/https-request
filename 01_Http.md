@@ -25,7 +25,7 @@ Bởi vì được “gửi và nhận bởi client và server” nên HTTP head
 - Upgrade-Insecure-Requests: là cảnh báo của trình duyệt đối với những giao thức http vì hiện nay nó đã không còn an toàn và có nguy cơ bị đánh cắp dữ liệu (đặc biệt là thông tin đăng nhập, tài khoản ngân hàng). Cách tốt nhất hiện nay là nâng cấp lên https để dữ liệu truyền tải được an toàn hơn.
 
 ## HTTP response header
-
+**Request Header**
 
 | Name        | Description           | Example  |
 | ------------- |:-------------:| -----:|
@@ -67,7 +67,7 @@ Bởi vì được “gửi và nhận bởi client và server” nên HTTP head
 | Warning | Một cảnh báo chung về các vấn đề có thể xảy ra với thực thể. | Warning: 199 Miscellaneous warning |
 
 
-Response header
+**Response header**
 
 | Name        | Description           | Example  |
 | ------------- |:-------------:| -----:|
@@ -106,8 +106,12 @@ Response header
 | Trailer | Giá trị chung của Trailer cho biết tập hợp các header field có mặt trong đoạn giới thiệu của một thông điệp được mã hóa bằng  chunked transfer coding. | Trailer: Max-Forwards |
 | Transfer-Encoding | Hình thức mã hóa được sử dụng để chuyển thực thể một cách an toàn tới người dùng. Các phương thức được xác định hiện tại là: chunked, compress, deflate, gzip, identity. Không được sử dụng với HTTP / 2 | Transfer-Encoding: chunked |
 | Tk | Tracking Status header, giá trị được đề xuất để gửi phản hồi cho một DNT (không theo dõi), các giá trị có thể: "!" — under construction | Tk: ? |
-
-
+| Upgrade | Yêu cầu client update 1 protocol khác. Không được dùng ở HTTP / 2 | Upgrade: h2c, HTTPS/1.3, IRC/6.9, RTA/x11, websocket |
+| Vary | Chỉ cho các proxy downstream làm thế nào để khớp các response header trong tương lai để quyết định xem response nên được lưu trong bộ nhớ cache để tái sử dụng hay yêu cầu một response mới từ server. | Example 1: Vary: * Example 2: Vary: Accept-Language |
+| Via | Thông báo cho client qua proxy xem những phản hồi nào đã được gửi | Via: 1.0 fred, 1.1 example.com (Apache/1.1) |
+| Warning | Một cảnh báo chung về các vấn đề có thể xảy ra với thực thể. | Warning: 199 Miscellaneous warning |
+| WWW-Authenticate | Cho biết sơ đồ xác thực nên được sử dụng để truy cập được thực thể | WWW-Authenticate: Basic |
+| X-Frame-Options | Clickjacking protection: từ chối - không hiển thị trong khung, cùng nguồn gốc - không hiển thị nếu origin không khớp, cho phép - cho phép từ vị trí đã chỉ định, allowall - không chuẩn, cho phép từ bất kỳ vị trí nào | X-Frame-Options: deny |
 
 
  
