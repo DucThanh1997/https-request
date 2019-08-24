@@ -36,8 +36,8 @@ Bởi vì được “gửi và nhận bởi client và server” nên HTTP head
 | Accept-Encoding | Chấp nhận các kiểu mã hóa | Accept-Encoding: gzip, deflate |
 | Accept-Language | Danh sách các ngôn ngữ chấp nhận | Accept-Language: en-US |
 | Access-Control-Request-Method, Access-Control-Request-Headers | Khai báo các method request từ 1 domain khác | Access-Control-Request-Method: GET|
-| Authorization | là chỗ để nhét token vào | Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ== |
-| Cache-Control | để chỉ định các lệnh phải tuân theo tất cả các cơ chế caching dọc trong suốt quá trình response. | Cache-Control: no-cache |
+| Authorization |  các Authentication credentials cho HTTP authentication. | Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ== |
+| Cache-Control | để chỉ định các lệnh phải tuân theo tất cả các cơ chế caching trong suốt quá trình response. | Cache-Control: no-cache |
 | Connection | Kiểm soát các option cho kết nối hiện tại và list ra các hop-by-hop field | Connection: keep-alive, Connection: Upgrade |
 | Content-Length | Chiều dài của request body trong hệ bát phân | Content-Length: 348 | 
 | Content-MD5 | chuỗi kí tự được mã hóa từ content length bởi base64 Md5 | Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ== |
